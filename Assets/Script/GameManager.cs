@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     {
         onPlay.Invoke();
         isPlaying= true;
+        Debug.Log("Start Game !");
     }
     public void GameOver()
     {
