@@ -3313,5 +3313,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2051848785828754699, guid: 8e8a1ebe1f9db6a4eb3c87ac4885586b, type: 3}
+      propertyPath: jumpTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051848785828754699, guid: 8e8a1ebe1f9db6a4eb3c87ac4885586b, type: 3}
+      propertyPath: jumpForce
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051848785828754699, guid: 8e8a1ebe1f9db6a4eb3c87ac4885586b, type: 3}
+      propertyPath: groundDistance
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e8a1ebe1f9db6a4eb3c87ac4885586b, type: 3}
