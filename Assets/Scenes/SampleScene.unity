@@ -3319,7 +3319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2051848785828754699, guid: 8e8a1ebe1f9db6a4eb3c87ac4885586b, type: 3}
       propertyPath: jumpForce
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2051848785828754699, guid: 8e8a1ebe1f9db6a4eb3c87ac4885586b, type: 3}
       propertyPath: groundDistance
