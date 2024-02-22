@@ -10,7 +10,7 @@ public class ObjectCollision : MonoBehaviour
         {
             if (!gameObject.CompareTag("Player"))
             { // Pastikan objek yang bertabrakan bukan objek asli
-             /*   Destroy(gameObject); // Menghancurkan klon (clone)*/
+                Destroy(gameObject); 
             }
         }
     }
