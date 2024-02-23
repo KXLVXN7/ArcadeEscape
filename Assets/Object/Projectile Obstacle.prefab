@@ -195,10 +195,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2528717569506792216, guid: 19443957a39199042821da96e77cc097, type: 3}
-  rocketSpeed: 10
+  rocketSpeed: 5
   upwardForce: 10
   downwardForce: 10
-  maxHoldTime: 2
 --- !u!1 &8512605006809056264
 GameObject:
   m_ObjectHideFlags: 0
