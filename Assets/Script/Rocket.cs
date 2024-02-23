@@ -4,67 +4,76 @@ public class Rocket : MonoBehaviour
 {
     public Transform player; // Referensi ke pemain
     public float rocketSpeed = 5f; // Kecepatan Rocket
-    public float liftForce = 10f; // Kekuatan naik untuk mencegah jatuhnya Rocket
-    private bool canControl = true; // Apakah Rocket bisa dikendalikan
-    private float controlTime = 2f; // Durasi waktu kontrol setelah pemain menekan tombol
-    private float currentControlTime = 0f; // Waktu kontrol saat ini
-
-    void Update()
-    {
-        // Jika Rocket bisa dikendalikan dan waktu kontrol belum habis
-        if (canControl && currentControlTime <= 0f)
-        {
-            // Mengecek input pemain untuk mengubah arah Rocket
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                // Jika tombol Arrow Up ditekan, Rocket naik
-                transform.Translate(Vector3.up * rocketSpeed * Time.deltaTime);
-                currentControlTime = controlTime; // Mulai waktu kontrol
-            }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                // Jika tombol Arrow Down ditekan, Rocket turun
-                transform.Translate(Vector3.down * rocketSpeed * Time.deltaTime);
-                currentControlTime = controlTime; // Mulai waktu kontrol
-            }
-        }
-
-        // Mengurangi waktu kontrol jika masih ada waktu tersisa
-        if (currentControlTime > 0f)
-        {
-            currentControlTime -= Time.deltaTime;
-        }
-    }
+    public float upwardForce = 10f; // Kecepatan naik Rocket saat tombol Arrow UP ditekan
+    public float downwardForce = 10f; // Kecepatan turun Rocket saat tombol Arrow DOWN ditekan
+    public float maxHoldTime = 2f; // Waktu maksimum menahan Rocket setelah tombol ditekan
+    private bool canFollowPlayer = true; // Apakah Rocket dapat mengikuti pemain
+    private float holdTime = 0f; // Waktu menahan Rocket setelah tombol ditekan
 
     void LateUpdate()
     {
-        // Jika Rocket bisa dikendalikan dan waktu kontrol habis
-        if (canControl && currentControlTime <= 0f)
+        // Mengecek apakah Rocket dapat mengikuti pemain
+        if (canFollowPlayer && player != null)
         {
-            // Rocket akan terus mengejar pemain
+            // Mendapatkan arah menuju pemain
             Vector3 targetDirection = (player.position - transform.position).normalized;
-            float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-            transform.Translate(Vector3.right * rocketSpeed * Time.deltaTime); // Menggunakan right agar Rocket selalu menghadap ke arah pemain
-            ApplyLiftForce(); // Menerapkan kekuatan naik untuk mencegah jatuh
+
+            // Memastikan bahwa Rocket menghadap ke arah pemain secara horizontal
+            targetDirection.y = 0f;
+
+            // Mengatur rotasi agar Rocket menghadap ke arah pemain
+            if (targetDirection != Vector3.zero)
+            {
+                transform.right = targetDirection;
+            }
+
+            // Menerapkan kecepatan Rocket
+            transform.Translate(Vector3.right * rocketSpeed * Time.deltaTime);
+
+            // Menahan Rocket setelah tombol ditekan
+            if (holdTime > 0f)
+            {
+                holdTime -= Time.deltaTime;
+                if (holdTime <= 0f)
+                {
+                    canFollowPlayer = true;
+                }
+            }
+
+            // Jika Rocket sudah mencapai pemain, maka berhenti mengikuti dan tetap bergerak ke kiri
+            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+            if (distanceToPlayer < 0.1f) // Ubah nilai jarak yang sesuai dengan kebutuhan Anda
+            {
+                canFollowPlayer = false;
+            }
         }
     }
 
-    // Method untuk menerapkan kekuatan naik untuk mencegah jatuhnya Rocket
-    void ApplyLiftForce()
+    // Method untuk menghentikan Rocket mengikuti pemain
+    public void StopFollowingPlayer()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0, liftForce);
+        canFollowPlayer = false;
     }
 
-    // Method untuk menghentikan kendali Rocket
-    public void StopControl()
+    // Method untuk menaikkan Rocket saat tombol Arrow UP ditekan
+    public void MoveUp()
     {
-        canControl = false;
+        if (canFollowPlayer)
+        {
+            transform.Translate(Vector3.up * upwardForce * Time.deltaTime);
+            holdTime = maxHoldTime;
+            canFollowPlayer = false;
+        }
     }
 
-    // Method untuk mengaktifkan kembali kendali Rocket
-    public void StartControl()
+    // Method untuk menurunkan Rocket saat tombol Arrow DOWN ditekan
+    public void MoveDown()
     {
-        canControl = true;
+        if (canFollowPlayer)
+        {
+            transform.Translate(Vector3.down * downwardForce * Time.deltaTime);
+            holdTime = maxHoldTime;
+            canFollowPlayer = false;
+        }
     }
 }
