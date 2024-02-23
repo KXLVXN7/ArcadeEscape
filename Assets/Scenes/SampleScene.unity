@@ -311,7 +311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &141035011
 Animator:
   serializedVersion: 5
@@ -2023,6 +2023,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 732586722}
   rocketSpeed: -10
+  upwardForce: 10
+  downwardForce: 10
+  maxHoldTime: 2
 --- !u!212 &1506713392
 SpriteRenderer:
   m_ObjectHideFlags: 0
