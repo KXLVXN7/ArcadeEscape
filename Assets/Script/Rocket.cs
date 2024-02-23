@@ -76,4 +76,17 @@ public class Rocket : MonoBehaviour
             canFollowPlayer = false;
         }
     }
+
+    // Kontrol menggunakan tombol Arrow UP dan Arrow DOWN
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            MoveUp();
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            MoveDown();
+        }
+    }
 }
