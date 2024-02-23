@@ -157,7 +157,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3710312990259750487}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -169,7 +169,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &7953357540928992406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,9 +194,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0481ab0958c1fa7458f9f46aa63bb790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2051848785389716905, guid: 8e8a1ebe1f9db6a4eb3c87ac4885586b, type: 3}
+  player: {fileID: 2528717569506792216, guid: 19443957a39199042821da96e77cc097, type: 3}
   rocketSpeed: 10
-  controlDuration: 2
+  upwardForce: 10
+  downwardForce: 10
+  maxHoldTime: 2
 --- !u!1 &8512605006809056264
 GameObject:
   m_ObjectHideFlags: 0
