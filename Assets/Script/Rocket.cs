@@ -20,13 +20,13 @@ public class Rocket : MonoBehaviour
     void Update()
     {
         // Mengecek input dari pemain untuk menggerakkan Rocket
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             // Menaikkan Rocket dengan gaya ke atas
             isUpwardPressed = true;
             StartCoroutine(StopUpward());
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             // Menurunkan Rocket dengan gaya ke bawah
             isDownwardPressed = true;
