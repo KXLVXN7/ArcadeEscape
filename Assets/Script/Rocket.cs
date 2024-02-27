@@ -56,6 +56,9 @@ public class Rocket : MonoBehaviour
         }
     }
 
+
+
+
     // Coroutine untuk menghentikan gaya naik setelah 2 detik
     IEnumerator StopUpward()
     {
