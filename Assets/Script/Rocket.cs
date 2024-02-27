@@ -5,7 +5,7 @@ public class Rocket : MonoBehaviour
 {
     public Transform player; // Referensi ke pemain
     public float rocketSpeed = 5f; // Kecepatan Rocket
-    public float upwardForce = 2f; // Kecepatan naik Rocket saat tombol Arrow UP ditekan
+    public float upwardForce = 1f; // Kecepatan naik Rocket saat tombol Arrow UP ditekan
     public float downwardForce = 1f; // Kecepatan turun Rocket saat tombol Arrow DOWN ditekan
     private Rigidbody2D rb; // Rigidbody2D Rocket
     private bool isUpwardPressed = false; // Apakah tombol Arrow UP sedang ditekan
@@ -20,13 +20,13 @@ public class Rocket : MonoBehaviour
     void Update()
     {
         // Mengecek input dari pemain untuk menggerakkan Rocket
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             // Menaikkan Rocket dengan gaya ke atas
             isUpwardPressed = true;
             StartCoroutine(StopUpward());
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             // Menurunkan Rocket dengan gaya ke bawah
             isDownwardPressed = true;
