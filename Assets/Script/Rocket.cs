@@ -59,14 +59,14 @@ public class Rocket : MonoBehaviour
     // Coroutine untuk menghentikan gaya naik setelah 2 detik
     IEnumerator StopUpward()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         isUpwardPressed = false;
     }
 
     // Coroutine untuk menghentikan gaya turun setelah 2 detik
     IEnumerator StopDownward()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         isDownwardPressed = false;
     }
 
