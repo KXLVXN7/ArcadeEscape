@@ -14,7 +14,7 @@ public class SpawnPoint : MonoBehaviour
     private float timeUntilObstacleSpawn;
 
     private void Update()
-    {
+    {   
         if (GameManager.instance.isPlaying)
         {
             SpawnLoop();
