@@ -5,7 +5,8 @@ public class RocketSpawner : MonoBehaviour
     public GameObject rocketPrefab; // Prefab Rocket yang akan di-spawn
     public Transform spawnPoint; // Titik spawn untuk Rocket
 
-    public float spawnInterval = 2f; // Interval waktu antara setiap spawn
+    public float spawnInterval1 = 2f; // Interval waktu antara setiap spawn untuk interval 1
+    public float spawnInterval2 = 5f; // Interval waktu antara setiap spawn untuk interval 2
     private float spawnTimer; // Waktu yang telah berlalu sejak spawn terakhir
 
     void Start()
@@ -18,11 +19,16 @@ public class RocketSpawner : MonoBehaviour
         // Menghitung waktu sejak spawn terakhir
         spawnTimer += Time.deltaTime;
 
-        // Jika sudah mencapai interval waktu spawn, lakukan spawn
-        if (spawnTimer >= spawnInterval)
+        // Cek apakah sudah mencapai interval 1 atau interval 2
+        if (spawnTimer >= spawnInterval1)
         {
             SpawnRocket();
             spawnTimer = 0f; // Reset timer
+        }
+        else if (spawnTimer >= spawnInterval2)
+        {
+            SpawnRocket();
+            spawnTimer = spawnInterval1; // Mulai kembali dari interval 1 setelah mencapai interval 2
         }
     }
 

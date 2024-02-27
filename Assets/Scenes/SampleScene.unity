@@ -169,7 +169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocketPrefab: {fileID: 3710312990259750487, guid: 444c098aac1caa44abdc78739ad835b6, type: 3}
   spawnPoint: {fileID: 48164352}
-  spawnInterval: 4
+  spawnInterval1: 7
+  spawnInterval2: 17
 --- !u!1 &104961261
 GameObject:
   m_ObjectHideFlags: 0
@@ -3082,7 +3083,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 732586722}
-  rocketSpeed: -10
+  acceleration: 1
+  maxSpeed: 10
   upwardForce: 10
   downwardForce: 10
 --- !u!212 &1506713392
@@ -4971,7 +4973,11 @@ PrefabInstance:
       objectReference: {fileID: 1270244712}
     - target: {fileID: 1552742626495453720, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
       propertyPath: jumpForce
-      value: 4
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552742626495453720, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
+      propertyPath: crouchHeight
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 1552742626495453721, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
       propertyPath: m_RootOrder
