@@ -4,7 +4,7 @@ public class PlayerCollision : MonoBehaviour
 {
     private Vector3 initialPosition; // Menyimpan posisi awal objek player
     private Rigidbody2D rb; // Rigidbody player
-    private Transform playerGFX; // Transform dari playerGFX
+    private Transform Stickman_Idle; // Transform dari playerGFX
 
     private void Start()
     {
@@ -12,7 +12,7 @@ public class PlayerCollision : MonoBehaviour
         rb = GetComponentInParent<Rigidbody2D>();
 
         // Mengambil transform dari playerGFX (anak pertama objek player)
-        playerGFX = transform.parent.Find("playerGFX");
+        Stickman_Idle = transform.parent.Find("Stickman_Idle");
 
         // Simpan posisi awal objek player
         initialPosition = transform.parent.position;
