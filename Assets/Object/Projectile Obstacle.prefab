@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 2562936537523586607}
   - component: {fileID: 8225041962790578587}
   - component: {fileID: 7953357540928992406}
-  - component: {fileID: 7829655586120355988}
+  - component: {fileID: -2692075075311256833}
   m_Layer: 0
   m_Name: Projectile Obstacle
   m_TagString: Obstacle
@@ -168,7 +168,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &7953357540928992406
 MonoBehaviour:
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62901d536084f8649bf4b5411d60848a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7829655586120355988
+--- !u!114 &-2692075075311256833
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0481ab0958c1fa7458f9f46aa63bb790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2528717569506792216, guid: 19443957a39199042821da96e77cc097, type: 3}
+  player: {fileID: 1552742626495453721, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
   rocketSpeed: 5
   upwardForce: 1.7
   downwardForce: 1.7

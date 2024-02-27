@@ -169,7 +169,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstaclePrefabs:
   - {fileID: 3710312990259750487, guid: 444c098aac1caa44abdc78739ad835b6, type: 3}
-  - {fileID: 3710312990259750487, guid: 444c098aac1caa44abdc78739ad835b6, type: 3}
   obstacleParent: {fileID: 1493685929}
   obstacleSpawnTime: 3
   obstacleSpeed: 4
@@ -1030,7 +1029,7 @@ GameObject:
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &640926243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4982,7 +4981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1552742626495453721, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 1552742626495453721, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
       propertyPath: m_LocalScale.y
