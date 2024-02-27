@@ -49,7 +49,6 @@ public class SpawnPoint : MonoBehaviour
         GameObject obstacleToSpawn = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
 
         GameObject spawnedObstacle = Instantiate(obstacleToSpawn, transform.position, Quaternion.identity);
-        transform.rotation = Quaternion.identity;
         spawnedObstacle.transform.parent = obstacleParent;
 
         Rigidbody2D obstacleRB = spawnedObstacle.GetComponent<Rigidbody2D>();
