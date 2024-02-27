@@ -1,27 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
+    private Vector3 initialPosition; // Menyimpan posisi awal objek player
+    private Rigidbody2D rb; // Rigidbody player
+    private Transform playerGFX; // Transform dari playerGFX
+
     private void Start()
     {
+        // Mengambil komponen Rigidbody2D dari parent (objek player)
+        rb = GetComponentInParent<Rigidbody2D>();
+
+        // Mengambil transform dari playerGFX (anak pertama objek player)
+        playerGFX = transform.parent.Find("playerGFX");
+
+        // Simpan posisi awal objek player
+        initialPosition = transform.parent.position;
+
+        // Daftarkan fungsi ActivatePlayer() sebagai listener untuk event onPlay
         GameManager.instance.onPlay.AddListener(ActivatePlayer);
     }
 
     private void ActivatePlayer()
     {
-        gameObject.SetActive(true);
+        // Aktifkan kembali objek player dan kembalikan ke posisi awal
+        transform.parent.gameObject.SetActive(true);
+        transform.parent.position = initialPosition;
+        // Reset kecepatan player
+        rb.velocity = Vector2.zero;
     }
-    private void OnCollisionEnter2D(Collision2D others)
 
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (others.transform.tag == "Obstacle")
+        if (other.transform.CompareTag("Obstacle"))
         {
-            gameObject.SetActive(false);
-            // sebelumnya destroy tapi sekarang dibikin false saja active objectnya
-            Debug.Log("Game Over !");
+            // Panggil fungsi GameOver() pada GameManager
             GameManager.instance.GameOver();
+
+            // Nonaktifkan objek player
+            transform.parent.gameObject.SetActive(false);
         }
     }
 }

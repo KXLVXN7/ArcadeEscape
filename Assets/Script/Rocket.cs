@@ -1,12 +1,15 @@
 using UnityEngine;
+using System.Collections;
 
 public class Rocket : MonoBehaviour
 {
     public Transform player; // Referensi ke pemain
     public float rocketSpeed = 5f; // Kecepatan Rocket
-    public float upwardForce = 10f; // Kecepatan naik Rocket saat tombol Arrow UP ditekan
-    public float downwardForce = 10f; // Kecepatan turun Rocket saat tombol Arrow DOWN ditekan
+    public float upwardForce = 2f; // Kecepatan naik Rocket saat tombol Arrow UP ditekan
+    public float downwardForce = 1f; // Kecepatan turun Rocket saat tombol Arrow DOWN ditekan
     private Rigidbody2D rb; // Rigidbody2D Rocket
+    private bool isUpwardPressed = false; // Apakah tombol Arrow UP sedang ditekan
+    private bool isDownwardPressed = false; // Apakah tombol Arrow DOWN sedang ditekan
 
     void Start()
     {
@@ -20,12 +23,14 @@ public class Rocket : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             // Menaikkan Rocket dengan gaya ke atas
-            rb.velocity = new Vector2(rb.velocity.x, upwardForce);
+            isUpwardPressed = true;
+            StartCoroutine(StopUpward());
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             // Menurunkan Rocket dengan gaya ke bawah
-            rb.velocity = new Vector2(rb.velocity.x, -downwardForce);
+            isDownwardPressed = true;
+            StartCoroutine(StopDownward());
         }
     }
 
@@ -48,6 +53,33 @@ public class Rocket : MonoBehaviour
 
             // Menerapkan kecepatan Rocket
             transform.Translate(Vector3.right * rocketSpeed * Time.deltaTime);
+        }
+    }
+
+    // Coroutine untuk menghentikan gaya naik setelah 2 detik
+    IEnumerator StopUpward()
+    {
+        yield return new WaitForSeconds(2f);
+        isUpwardPressed = false;
+    }
+
+    // Coroutine untuk menghentikan gaya turun setelah 2 detik
+    IEnumerator StopDownward()
+    {
+        yield return new WaitForSeconds(2f);
+        isDownwardPressed = false;
+    }
+
+    void FixedUpdate()
+    {
+        // Menggerakkan Rocket sesuai input pemain
+        if (isUpwardPressed)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, upwardForce);
+        }
+        else if (isDownwardPressed)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, -downwardForce);
         }
     }
 }
