@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Rocket : MonoBehaviour
+public class Rocket2 : MonoBehaviour
 {
     public Transform player; // Referensi ke pemain
     public float acceleration = 1f; // Percepatan arah Rocket
