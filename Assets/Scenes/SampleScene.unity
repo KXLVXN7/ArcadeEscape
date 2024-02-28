@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 48164352}
   - component: {fileID: 48164353}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: Rocket_SpawnPoint
   m_TagString: Obstacle
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1285,33 +1285,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 640926244}
-  - component: {fileID: 640926243}
   - component: {fileID: 640926245}
   m_Layer: 0
-  m_Name: SpawnPoint2
+  m_Name: Rocket_SpawnPoint2
   m_TagString: Obstacle
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &640926243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640926242}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7723546ecf4b9e84c81a6784392e0adb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstaclePrefabs:
-  - {fileID: 3710312990259750487, guid: 444c098aac1caa44abdc78739ad835b6, type: 3}
-  - {fileID: 3710312990259750487, guid: 444c098aac1caa44abdc78739ad835b6, type: 3}
-  obstacleParent: {fileID: 1493685929}
-  obstacleSpawnTime: 5
-  obstacleSpeed: 4
 --- !u!4 &640926244
 Transform:
   m_ObjectHideFlags: 0
@@ -4241,7 +4222,7 @@ GameObject:
   - component: {fileID: 1720276820}
   - component: {fileID: 1720276821}
   m_Layer: 6
-  m_Name: SpawnPoint
+  m_Name: Ground_SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5087,7 +5068,7 @@ GameObject:
   - component: {fileID: 2065600165}
   - component: {fileID: 2065600164}
   m_Layer: 0
-  m_Name: SpawnPoint_2
+  m_Name: Spike_SpawnPoint_2
   m_TagString: Obstacle
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

@@ -53,5 +53,6 @@ public class SpawnPoint : MonoBehaviour
 
         Rigidbody2D obstacleRB = spawnedObstacle.GetComponent<Rigidbody2D>();
         obstacleRB.velocity = Vector2.left * obstacleSpeed;
+        Debug.Log("Spawn Obstacle Spike");
     }
 }

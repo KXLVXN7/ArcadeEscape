@@ -21,6 +21,7 @@ public class Ground : MonoBehaviour
         if (transform.position.x < -screenRight - destroyOffset)
         {
             Destroy(gameObject);
+            Debug.Log("Destroy Ground");
         }
     }
 }

@@ -53,5 +53,6 @@ public class GroundSpawnPoint : MonoBehaviour
 
         // Pindahkan ground yang di-spawn ke kiri berdasarkan kecepatan tanah yang ditentukan
         spawnedGround.transform.Translate(Vector3.left * groundSpeed * Time.deltaTime);
+        Debug.Log("Spawn Ground");
     }
 }
