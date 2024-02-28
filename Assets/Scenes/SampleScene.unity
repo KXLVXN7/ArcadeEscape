@@ -672,8 +672,8 @@ MonoBehaviour:
   groundPrefab: {fileID: 361985280}
   spawnPoint: {fileID: 1720276819}
   groundSpeed: 5.5
-  spawnInterval: 6
-  destroyOffset: 20
+  spawnInterval: 3
+  destroyOffset: 12
 --- !u!1 &469278370
 GameObject:
   m_ObjectHideFlags: 0
@@ -3801,9 +3801,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundPrefab: {fileID: 361985280}
   spawnPoint: {fileID: 1720276819}
-  groundSpeed: 4
+  groundSpeed: 5.5
   spawnInterval: 18
-  destroyOffset: 20
+  destroyOffset: 12
 --- !u!1 &1599026801
 GameObject:
   m_ObjectHideFlags: 0
