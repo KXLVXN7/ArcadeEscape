@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GroundSpawnPoint : MonoBehaviour
@@ -9,6 +7,7 @@ public class GroundSpawnPoint : MonoBehaviour
 
     public float groundSpawnTime = 2f;
     public float groundSpeed = 3f;
+    public float destroyTime = 10f; // Waktu sebelum klon dihancurkan
 
     private float timeUntilGroundSpawn;
 
@@ -53,6 +52,10 @@ public class GroundSpawnPoint : MonoBehaviour
 
         // Pindahkan ground yang di-spawn ke kiri berdasarkan kecepatan tanah yang ditentukan
         spawnedGround.transform.Translate(Vector3.left * groundSpeed * Time.deltaTime);
+
+        // Hancurkan klon setelah waktu destroy yang ditentukan
+        Destroy(spawnedGround, destroyTime);
+
         Debug.Log("Spawn Ground");
     }
 }
