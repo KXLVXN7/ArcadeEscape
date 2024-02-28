@@ -21,11 +21,11 @@ public class Rocket : MonoBehaviour
     void Update()
     {
         // Mengambil input tombol Arrow Up dan Arrow Down
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             isDownwardPressed = true;
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             isUpwardPressed = true;
         }
