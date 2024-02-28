@@ -428,6 +428,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176496036}
   m_CullTransparentMesh: 1
+--- !u!95 &194710961 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1552742626495453727, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
+  m_PrefabInstance: {fileID: 1552742625832076381}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &222124374
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +604,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundSpeed: 5.5
+  speedIncrement: 1
+  maxSpeedIncrement: 10
   destroyOffset: 20
 --- !u!1 &471715281
 GameObject:
@@ -1331,6 +1338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.11
   speedIncrement: 0.1
+  maxSpeedIncrement: 100
 --- !u!1 &718619588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,6 +1815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.01
   speedIncrement: 0.1
+  maxSpeedIncrement: 100
 --- !u!1 &995856220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,6 +2230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.05
   speedIncrement: 0.1
+  maxSpeedIncrement: 100
 --- !u!1 &1189140639
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,6 +2464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.03
   speedIncrement: 0.1
+  maxSpeedIncrement: 100
 --- !u!4 &1270244712 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7379232022671502011, guid: 8e8a1ebe1f9db6a4eb3c87ac4885586b, type: 3}
@@ -2557,6 +2568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.09
   speedIncrement: 0.1
+  maxSpeedIncrement: 100
 --- !u!1 &1426392430
 GameObject:
   m_ObjectHideFlags: 0
@@ -3056,6 +3068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundSpeed: 3
+  speedIncrement: 1
+  maxSpeedIncrement: 10
   destroyOffset: 20
 --- !u!50 &1584834258
 Rigidbody2D:
@@ -3576,7 +3590,6 @@ MonoBehaviour:
   groundParent: {fileID: 297897471}
   groundSpawnTime: 3
   groundSpeed: 5.5
-  speedIncrement: 0.1
   destroyTime: 24
 --- !u!1 &1724758573
 GameObject:
@@ -3676,6 +3689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.07
   speedIncrement: 0.1
+  maxSpeedIncrement: 100
 --- !u!1 &1737891451
 GameObject:
   m_ObjectHideFlags: 0
@@ -4583,6 +4597,10 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 1560008362}
+    - target: {fileID: 1552742626495453720, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 194710961}
     - target: {fileID: 1552742626495453720, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
       propertyPath: feetPos
       value: 
