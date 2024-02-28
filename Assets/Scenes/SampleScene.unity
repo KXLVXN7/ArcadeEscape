@@ -598,7 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d4c248d59c03e48b827a4cd9c48d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundSpeed: 3
+  groundSpeed: 5.5
   destroyOffset: 20
 --- !u!114 &361985286
 MonoBehaviour:
@@ -1432,7 +1432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15729b01866516c4fb755e5438cddf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.361
+  speed: 0.011
 --- !u!1 &718619588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2068,7 +2068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15729b01866516c4fb755e5438cddf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.019
+  speed: 0.01
 --- !u!1 &995856220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2649,7 +2649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15729b01866516c4fb755e5438cddf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.142
+  speed: 0.05
 --- !u!1 &1189140639
 GameObject:
   m_ObjectHideFlags: 0
@@ -3015,7 +3015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15729b01866516c4fb755e5438cddf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.077
+  speed: 0.03
 --- !u!4 &1270244712 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7379232022671502011, guid: 8e8a1ebe1f9db6a4eb3c87ac4885586b, type: 3}
@@ -3117,7 +3117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15729b01866516c4fb755e5438cddf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.296
+  speed: 0.09
 --- !u!1 &1426392430
 GameObject:
   m_ObjectHideFlags: 0
@@ -4403,8 +4403,8 @@ MonoBehaviour:
   groundPrefabs:
   - {fileID: 361985280}
   groundParent: {fileID: 297897471}
-  groundSpawnTime: 5.5
-  groundSpeed: 3
+  groundSpawnTime: 3
+  groundSpeed: 5.5
   destroyTime: 24
 --- !u!1 &1724758573
 GameObject:
@@ -4502,7 +4502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15729b01866516c4fb755e5438cddf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.224
+  speed: 0.07
 --- !u!1 &1737891451
 GameObject:
   m_ObjectHideFlags: 0
@@ -5219,7 +5219,7 @@ GameObject:
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2065600164
 MonoBehaviour:
   m_ObjectHideFlags: 0
