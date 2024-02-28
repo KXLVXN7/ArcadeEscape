@@ -46,6 +46,11 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Over !!");
         currentScore = 0;
         isPlaying = false;
+
+    }
+    
+    public void Restart()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
