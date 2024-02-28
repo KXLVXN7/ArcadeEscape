@@ -199,7 +199,7 @@ MonoBehaviour:
   maxSpeed: 15
   speedIncrement: 1
   upwardForce: 5
-  downwardForce: 1.7
+  downwardForce: 5
 --- !u!1 &8512605006809056264
 GameObject:
   m_ObjectHideFlags: 0
