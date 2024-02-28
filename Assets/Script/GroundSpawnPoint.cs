@@ -7,7 +7,6 @@ public class GroundSpawnPoint : MonoBehaviour
 
     public float groundSpawnTime = 2f;
     public float groundSpeed = 3f;
-    public float speedIncrement = 0.1f; // Penambahan kecepatan setiap detik
     public float destroyTime = 10f; // Waktu sebelum klon dihancurkan
 
     private float timeUntilGroundSpawn;
@@ -17,9 +16,6 @@ public class GroundSpawnPoint : MonoBehaviour
         if (GameManager.instance.isPlaying)
         {
             SpawnLoop();
-
-            // Tambahkan speed increment setiap detik
-            groundSpeed += speedIncrement * Time.deltaTime;
         }
     }
 
