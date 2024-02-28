@@ -8,7 +8,9 @@ public class GroundSpawnPoint : MonoBehaviour
     public float groundSpawnTime = 2f;
     public float groundSpeed = 3f;
     public float destroyTime = 10f; // Waktu sebelum klon dihancurkan
-    public float speedIncrement = 1f; // Penambahan kecepatan setiap 10 detik
+    public float spawnTimeIncrement = 0.1f; // Penambahan waktu spawn setiap 10 detik
+    public float maxSpawnTimeIncrement = 2f; // Penambahan waktu spawn maksimal
+    public float minGroundSpawnTime = 0.5f; // Waktu spawn minimum
     public int maxSpeedIncreaseCount = 10; // Jumlah maksimal penambahan kecepatan
 
     private float timeUntilGroundSpawn;
@@ -75,7 +77,7 @@ public class GroundSpawnPoint : MonoBehaviour
         // Jika sudah 10 detik dan belum mencapai maksimal penambahan speed, tambahkan speed
         if (elapsedTime >= 10f && speedIncreaseCount < maxSpeedIncreaseCount)
         {
-            groundSpeed += speedIncrement;
+            groundSpawnTime = Mathf.Max(minGroundSpawnTime, groundSpawnTime - spawnTimeIncrement);
             elapsedTime = 0f; // Reset waktu yang telah berlalu
             speedIncreaseCount++; // Tambah jumlah penambahan speed
         }
