@@ -197,7 +197,8 @@ MonoBehaviour:
   player: {fileID: 1552742626495453721, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
   acceleration: 10
   maxSpeed: 15
-  upwardForce: 1.7
+  speedIncrement: 1
+  upwardForce: 5
   downwardForce: 1.7
 --- !u!1 &8512605006809056264
 GameObject:

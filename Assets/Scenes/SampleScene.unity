@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &48164352
 Transform:
   m_ObjectHideFlags: 0
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48164351}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bbe8eef08c07924aaef58d4c10c1cbf, type: 3}
   m_Name: 
@@ -721,6 +721,18 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 361985285}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 48164353}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -1329,7 +1341,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15729b01866516c4fb755e5438cddf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.011
+  speed: 0.11
+  speedIncrement: 0.1
 --- !u!1 &718619588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,6 +1818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.01
+  speedIncrement: 0.1
 --- !u!1 &995856220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2218,6 +2232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.05
+  speedIncrement: 0.1
 --- !u!1 &1189140639
 GameObject:
   m_ObjectHideFlags: 0
@@ -2450,6 +2465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.03
+  speedIncrement: 0.1
 --- !u!4 &1270244712 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7379232022671502011, guid: 8e8a1ebe1f9db6a4eb3c87ac4885586b, type: 3}
@@ -2552,6 +2568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.09
+  speedIncrement: 0.1
 --- !u!1 &1426392430
 GameObject:
   m_ObjectHideFlags: 0
@@ -3669,6 +3686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.07
+  speedIncrement: 0.1
 --- !u!1 &1737891451
 GameObject:
   m_ObjectHideFlags: 0

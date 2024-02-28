@@ -5,6 +5,7 @@ public class Rocket : MonoBehaviour
     public Transform player; // Referensi ke pemain
     public float acceleration = 1f; // Percepatan arah Rocket
     public float maxSpeed = 10f; // Kecepatan maksimal Rocket
+    public float speedIncrement = 1f; // Penambahan kecepatan setiap detik
 
     private Rigidbody2D rb; // Rigidbody2D Rocket
     private bool isUpwardPressed = false; // Apakah tombol Arrow UP sedang ditekan
@@ -20,11 +21,11 @@ public class Rocket : MonoBehaviour
     void Update()
     {
         // Mengambil input tombol Arrow Up dan Arrow Down
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             isDownwardPressed = true;
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             isUpwardPressed = true;
         }
@@ -68,5 +69,8 @@ public class Rocket : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, -downwardForce);
             isDownwardPressed = false;
         }
+
+        // Menambahkan peningkatan kecepatan setiap detik
+        maxSpeed += speedIncrement * Time.deltaTime;
     }
 }

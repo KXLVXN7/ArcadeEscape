@@ -36,13 +36,13 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         onPlay.Invoke();
-        isPlaying= true;
+        isPlaying = true;
         Debug.Log("Start Game !");
     }
     public void GameOver()
     {
-        onGameOver.Invoke();   
-        currentScore= 0;
+        onGameOver.Invoke();
+        currentScore = 0;
         isPlaying = false;
     }
 
@@ -51,4 +51,3 @@ public class GameManager : MonoBehaviour
         return Mathf.RoundToInt(currentScore).ToString();
     }
 }
-
