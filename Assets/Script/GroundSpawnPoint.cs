@@ -55,6 +55,7 @@ public class GroundSpawnPoint : MonoBehaviour
 
         // Hancurkan klon setelah waktu destroy yang ditentukan
         Destroy(spawnedGround, destroyTime);
+        Debug.Log("Destroy Spawned Ground");
 
         Debug.Log("Spawn Ground");
     }
