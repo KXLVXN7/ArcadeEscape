@@ -3,7 +3,7 @@ using UnityEngine;
 public class Ground : MonoBehaviour
 {
     public float groundSpeed = 5f; // Kecepatan pergerakan tanah ke kiri
-    public float destroyOffset = 20f; // Jarak dari layar kamera di mana tanah akan dihancurkan
+/*    public float destroyOffset = 20f; // Jarak dari layar kamera di mana tanah akan dihancurkan*/
 
     private float screenRight;
 
@@ -18,9 +18,8 @@ public class Ground : MonoBehaviour
         transform.Translate(Vector3.left * groundSpeed * Time.deltaTime);
 
         // Jika Ground berada di luar layar kamera, hancurkan objek
-        if (transform.position.x < -screenRight - destroyOffset)
+        if (transform.position.x < -screenRight)
         {
-            Destroy(gameObject);
             Debug.Log("Destroy Ground");
         }
     }
