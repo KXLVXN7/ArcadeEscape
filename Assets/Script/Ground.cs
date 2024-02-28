@@ -3,7 +3,7 @@ using UnityEngine;
 public class Ground : MonoBehaviour
 {
     public float groundSpeed = 5f; // Kecepatan pergerakan tanah ke kiri
-/*    public float destroyOffset = 20f; // Jarak dari layar kamera di mana tanah akan dihancurkan*/
+    public float destroyOffset = 20f; // Jarak dari layar kamera di mana tanah akan dihancurkan
 
     private float screenRight;
 
@@ -18,9 +18,18 @@ public class Ground : MonoBehaviour
         transform.Translate(Vector3.left * groundSpeed * Time.deltaTime);
 
         // Jika Ground berada di luar layar kamera, hancurkan objek
-        if (transform.position.x < -screenRight)
+        if (transform.position.x < -screenRight - destroyOffset)
         {
-            Debug.Log("Destroy Ground");
+            // Jika objek ini adalah klon, hancurkan hanya klonnya saja
+            if (transform.parent != null)
+            {
+                Destroy(gameObject);
+                Debug.Log("Destroy Ground Clone");
+            }
+            else
+            {
+                Debug.LogWarning("This object is not a clone and cannot be destroyed individually.");
+            }
         }
     }
 }
