@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48164351}
   m_LocalRotation: {x: -0, y: -0, z: 0.081198946, w: 0.9966979}
-  m_LocalPosition: {x: 9.64, y: 2.83, z: 0}
+  m_LocalPosition: {x: 9.95, y: 2.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -164,14 +164,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 48164351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7723546ecf4b9e84c81a6784392e0adb, type: 3}
+  m_Script: {fileID: 11500000, guid: 4bbe8eef08c07924aaef58d4c10c1cbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefabs:
-  - {fileID: 3710312990259750487, guid: 444c098aac1caa44abdc78739ad835b6, type: 3}
-  obstacleParent: {fileID: 1493685929}
-  obstacleSpawnTime: 3
-  obstacleSpeed: 4
+  rocketPrefab: {fileID: 3710312990259750487, guid: 444c098aac1caa44abdc78739ad835b6, type: 3}
+  spawnPoint: {fileID: 48164352}
+  spawnInterval1: 7
+  spawnInterval2: 17
 --- !u!1 &104961261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,34 +1396,10 @@ MonoBehaviour:
   isPlaying: 0
   onPlay:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2022611145}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onGameOver:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1426392430}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &725796032
 Transform:
   m_ObjectHideFlags: 0
@@ -3148,7 +3123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 732586722}
-  rocketSpeed: -10
+  acceleration: 1
+  maxSpeed: 10
   upwardForce: 10
   downwardForce: 10
 --- !u!212 &1506713392
@@ -5037,7 +5013,11 @@ PrefabInstance:
       objectReference: {fileID: 1270244712}
     - target: {fileID: 1552742626495453720, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
       propertyPath: jumpForce
-      value: 4
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552742626495453720, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
+      propertyPath: crouchHeight
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 1552742626495453721, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
       propertyPath: m_RootOrder
