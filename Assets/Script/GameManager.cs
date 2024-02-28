@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -42,8 +43,10 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         onGameOver.Invoke();
+        Debug.Log("Game Over !!");
         currentScore = 0;
         isPlaying = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public string PScore()
