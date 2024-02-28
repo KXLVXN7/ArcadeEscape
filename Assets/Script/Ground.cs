@@ -6,10 +6,15 @@ public class Ground : MonoBehaviour
     public float destroyOffset = 20f; // Jarak dari layar kamera di mana tanah akan dihancurkan
 
     private float screenRight;
+    private bool isClone = false;
 
     void Start()
     {
         screenRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z)).x;
+        if (transform.parent != null)
+        {
+            isClone = true;
+        }
     }
 
     void Update()
@@ -17,19 +22,11 @@ public class Ground : MonoBehaviour
         // Menggerakkan Ground ke kiri dengan kecepatan tertentu setiap frame
         transform.Translate(Vector3.left * groundSpeed * Time.deltaTime);
 
-        // Jika Ground berada di luar layar kamera, hancurkan objek
-        if (transform.position.x < -screenRight - destroyOffset)
+        // Jika Ground berada di luar layar kamera, hancurkan klon
+        if (isClone && transform.position.x < -screenRight)
         {
-            // Jika objek ini adalah klon, hancurkan hanya klonnya saja
-            if (transform.parent != null)
-            {
-                Destroy(gameObject);
-                Debug.Log("Destroy Ground Clone");
-            }
-            else
-            {
-                Debug.LogWarning("This object is not a clone and cannot be destroyed individually.");
-            }
+        /*    Destroy(gameObject);
+            Debug.Log("Destroy Ground Clone");*/
         }
     }
 }
