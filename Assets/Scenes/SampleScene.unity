@@ -3734,9 +3734,9 @@ MonoBehaviour:
   groundPrefabs:
   - {fileID: 361985280}
   groundParent: {fileID: 297897471}
-  groundSpawnTime: 2.100001
+  groundSpawnTime: 2.5
   destroyTime: 15
-  spawnTimeIncrement: 0.1
+  spawnTimeIncrement: 0
   maxSpeedIncreaseCount: 9
 --- !u!1 &1724758573
 GameObject:
@@ -4964,6 +4964,34 @@ PrefabInstance:
     - target: {fileID: 1552742626495453721, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552742626495453723, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
+      propertyPath: m_Size.x
+      value: 0.86681944
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552742626495453723, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1429732
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552742626495453723, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.039767236
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552742626495453723, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.5714866
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552742626495453723, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552742626495453723, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552742626495453723, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 1552742626495453724, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
       propertyPath: m_Name
