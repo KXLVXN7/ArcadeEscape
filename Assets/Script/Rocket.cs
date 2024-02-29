@@ -26,11 +26,11 @@ public class Rocket : MonoBehaviour
         // Mengambil input tombol Arrow Up dan Arrow Down
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            isDownwardPressed = true;
+            PressDownwardButton();
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            isUpwardPressed = true;
+            PressUpwardButton();
         }
     }
 
@@ -82,5 +82,19 @@ public class Rocket : MonoBehaviour
             maxSpeed += speedIncrement;
             elapsedTime = 0f; // Reset waktu yang telah berlalu
         }
+    }
+
+    // Dipanggil saat tombol "Up" ditekan
+    public void PressUpwardButton()
+    {
+        isUpwardPressed = true;
+        Debug.Log("Press Upward Button");
+    }
+
+    // Dipanggil saat tombol "Down" ditekan
+    public void PressDownwardButton()
+    {
+        isDownwardPressed = true;
+        Debug.Log("Press Downward Button");
     }
 }
