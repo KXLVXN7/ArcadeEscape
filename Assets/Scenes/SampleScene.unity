@@ -636,9 +636,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d4c248d59c03e48b827a4cd9c48d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundSpeed: 5.5
-  speedIncrement: 1
-  maxSpeedIncrement: 10
+  groundSpeed: 7.900002
+  speedIncrement: 3
+  maxSpeedIncrement: 70
 --- !u!1 &471715281
 GameObject:
   m_ObjectHideFlags: 0
@@ -3098,9 +3098,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d4c248d59c03e48b827a4cd9c48d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundSpeed: 3
-  speedIncrement: 1
-  maxSpeedIncrement: 10
+  groundSpeed: 7.900002
+  speedIncrement: 3
+  maxSpeedIncrement: 70
 --- !u!50 &1584834258
 Rigidbody2D:
   serializedVersion: 4
@@ -3618,13 +3618,10 @@ MonoBehaviour:
   groundPrefabs:
   - {fileID: 361985280}
   groundParent: {fileID: 297897471}
-  groundSpawnTime: 3
-  groundSpeed: 5.5
-  destroyTime: 24
+  groundSpawnTime: 2.100001
+  destroyTime: 15
   spawnTimeIncrement: 0.1
-  maxSpawnTimeIncrement: 2
-  minGroundSpawnTime: 0.5
-  maxSpeedIncreaseCount: 10
+  maxSpeedIncreaseCount: 9
 --- !u!1 &1724758573
 GameObject:
   m_ObjectHideFlags: 0
