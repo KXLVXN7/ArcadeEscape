@@ -28,6 +28,7 @@ public class Ground : MonoBehaviour
         {
             groundSpeed += speedIncrement; // Tambah kecepatan
             speedIncreased = true; // Tandai bahwa kecepatan telah ditambahkan
+            Debug.Log("Speed Increment : " + speedIncrement);
         }
     }
 

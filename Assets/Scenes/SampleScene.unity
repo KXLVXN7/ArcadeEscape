@@ -638,7 +638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundSpeed: 7.900002
   speedIncrement: 3
-  maxSpeedIncrement: 70
+  timeToWait: 10
 --- !u!1 &471715281
 GameObject:
   m_ObjectHideFlags: 0
@@ -3100,7 +3100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundSpeed: 7.900002
   speedIncrement: 3
-  maxSpeedIncrement: 70
+  timeToWait: 10
 --- !u!50 &1584834258
 Rigidbody2D:
   serializedVersion: 4
@@ -4239,7 +4239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1988694269
 Transform:
   m_ObjectHideFlags: 0
