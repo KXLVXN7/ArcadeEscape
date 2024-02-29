@@ -6,11 +6,8 @@ public class GroundSpawnPoint : MonoBehaviour
     [SerializeField] private Transform groundParent;
 
     public float groundSpawnTime = 2f;
-    public float groundSpeed = 3f;
     public float destroyTime = 10f; // Waktu sebelum klon dihancurkan
     public float spawnTimeIncrement = 0.1f; // Penambahan waktu spawn setiap 10 detik
-    public float maxSpawnTimeIncrement = 2f; // Penambahan waktu spawn maksimal
-    public float minGroundSpawnTime = 0.5f; // Waktu spawn minimum
     public int maxSpeedIncreaseCount = 10; // Jumlah maksimal penambahan kecepatan
 
     private float timeUntilGroundSpawn;
@@ -59,9 +56,6 @@ public class GroundSpawnPoint : MonoBehaviour
         GameObject spawnedGround = Instantiate(groundToSpawn, transform.position, Quaternion.identity);
         spawnedGround.transform.parent = groundParent;
 
-        // Pindahkan ground yang di-spawn ke kiri berdasarkan kecepatan tanah yang ditentukan
-        spawnedGround.transform.Translate(Vector3.left * groundSpeed * Time.deltaTime);
-
         // Hancurkan klon setelah waktu destroy yang ditentukan
         Destroy(spawnedGround, destroyTime);
         Debug.Log("Destroy Spawned Ground");
@@ -77,7 +71,9 @@ public class GroundSpawnPoint : MonoBehaviour
         // Jika sudah 10 detik dan belum mencapai maksimal penambahan speed, tambahkan speed
         if (elapsedTime >= 10f && speedIncreaseCount < maxSpeedIncreaseCount)
         {
-            groundSpawnTime = Mathf.Max(minGroundSpawnTime, groundSpawnTime - spawnTimeIncrement);
+            groundSpawnTime = Mathf.Max(0.5f, groundSpawnTime - spawnTimeIncrement); // Adjust the minimum spawn time here if needed
+            destroyTime = Mathf.Max(2f, destroyTime - spawnTimeIncrement); // Adjust the minimum destroy time here if needed
+
             elapsedTime = 0f; // Reset waktu yang telah berlalu
             speedIncreaseCount++; // Tambah jumlah penambahan speed
         }

@@ -636,9 +636,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d4c248d59c03e48b827a4cd9c48d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundSpeed: 5.5
-  speedIncrement: 0.3
-  maxSpeedIncrement: 70
+  groundSpeed: 7.900002
+  speedIncrement: 3
+  timeToWait: 10
 --- !u!1 &471715281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,8 +1369,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.11
-  speedIncrement: 0.05
-  maxSpeedIncrement: 70
+  speedIncrement: 0.1
+  maxSpeedIncrement: 100
 --- !u!1 &718619588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,8 +1845,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.01
-  speedIncrement: 0.05
-  maxSpeedIncrement: 70
+  speedIncrement: 0.1
+  maxSpeedIncrement: 100
 --- !u!1 &995856220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2260,8 +2260,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.05
-  speedIncrement: 0.05
-  maxSpeedIncrement: 70
+  speedIncrement: 0.1
+  maxSpeedIncrement: 100
 --- !u!1 &1189140639
 GameObject:
   m_ObjectHideFlags: 0
@@ -2494,8 +2494,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.03
-  speedIncrement: 0.05
-  maxSpeedIncrement: 70
+  speedIncrement: 0.1
+  maxSpeedIncrement: 100
 --- !u!4 &1270244712 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7379232022671502011, guid: 8e8a1ebe1f9db6a4eb3c87ac4885586b, type: 3}
@@ -2598,8 +2598,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.09
-  speedIncrement: 0.05
-  maxSpeedIncrement: 70
+  speedIncrement: 0.1
+  maxSpeedIncrement: 100
 --- !u!1 &1426392430
 GameObject:
   m_ObjectHideFlags: 0
@@ -3098,9 +3098,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d4c248d59c03e48b827a4cd9c48d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundSpeed: 5.5
-  speedIncrement: 0.3
-  maxSpeedIncrement: 70
+  groundSpeed: 7.900002
+  speedIncrement: 3
+  timeToWait: 10
 --- !u!50 &1584834258
 Rigidbody2D:
   serializedVersion: 4
@@ -3618,12 +3618,9 @@ MonoBehaviour:
   groundPrefabs:
   - {fileID: 361985280}
   groundParent: {fileID: 297897471}
-  groundSpawnTime: 3
-  groundSpeed: 0
+  groundSpawnTime: 2.100001
   destroyTime: 15
   spawnTimeIncrement: 0.1
-  maxSpawnTimeIncrement: 70
-  minGroundSpawnTime: 0.5
   maxSpeedIncreaseCount: 9
 --- !u!1 &1724758573
 GameObject:
@@ -3722,8 +3719,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.07
-  speedIncrement: 0.05
-  maxSpeedIncrement: 70
+  speedIncrement: 0.1
+  maxSpeedIncrement: 100
 --- !u!1 &1737891451
 GameObject:
   m_ObjectHideFlags: 0
@@ -4242,7 +4239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1988694269
 Transform:
   m_ObjectHideFlags: 0
