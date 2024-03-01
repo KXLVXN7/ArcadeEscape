@@ -12,8 +12,8 @@ public class Rocket : MonoBehaviour
     private Rigidbody2D rb; // Rigidbody2D Rocket
     public bool isUpwardPressed = false; // Apakah tombol Arrow UP sedang ditekan
     public bool isDownwardPressed = false; // Apakah tombol Arrow DOWN sedang ditekan
-    public float upwardForce = 1f; // Kecepatan naik Rocket saat tombol Arrow UP ditekan
-    public float downwardForce = 1f; // Kecepatan turun Rocket saat tombol Arrow DOWN ditekan
+    public float upwardForce = 5f; // Kecepatan naik Rocket saat tombol Arrow UP ditekan
+    public float downwardForce = 5f; // Kecepatan turun Rocket saat tombol Arrow DOWN ditekan
 
     void Start()
     {
