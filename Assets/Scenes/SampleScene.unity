@@ -5262,7 +5262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1988694269
 Transform:
   m_ObjectHideFlags: 0
@@ -5806,7 +5806,7 @@ PrefabInstance:
       objectReference: {fileID: 1270244712}
     - target: {fileID: 1552742626495453720, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
       propertyPath: jumpForce
-      value: 5
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 1552742626495453720, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
       propertyPath: m_Enabled
