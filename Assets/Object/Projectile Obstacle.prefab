@@ -198,6 +198,9 @@ MonoBehaviour:
   acceleration: 10
   maxSpeed: 15
   speedIncrement: 1
+  maxSpeedIncrement: 50
+  isUpwardPressed: 0
+  isDownwardPressed: 0
   upwardForce: 5
   downwardForce: 5
 --- !u!1 &8512605006809056264

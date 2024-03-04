@@ -10,10 +10,10 @@ public class Rocket : MonoBehaviour
     private float elapsedTime; // Waktu yang telah berlalu sejak penambahan terakhir
 
     private Rigidbody2D rb; // Rigidbody2D Rocket
-    private bool isUpwardPressed = false; // Apakah tombol Arrow UP sedang ditekan
-    private bool isDownwardPressed = false; // Apakah tombol Arrow DOWN sedang ditekan
-    public float upwardForce = 1f; // Kecepatan naik Rocket saat tombol Arrow UP ditekan
-    public float downwardForce = 1f; // Kecepatan turun Rocket saat tombol Arrow DOWN ditekan
+    public bool isUpwardPressed = false; // Apakah tombol Arrow UP sedang ditekan
+    public bool isDownwardPressed = false; // Apakah tombol Arrow DOWN sedang ditekan
+    public float upwardForce = 5f; // Kecepatan naik Rocket saat tombol Arrow UP ditekan
+    public float downwardForce = 5f; // Kecepatan turun Rocket saat tombol Arrow DOWN ditekan
 
     void Start()
     {
@@ -21,16 +21,30 @@ public class Rocket : MonoBehaviour
         elapsedTime = 0f; // Inisialisasi waktu yang telah berlalu
     }
 
+    // Dipanggil saat tombol "Up" ditekan
+    public void PressUpwardButton()
+    {
+        isUpwardPressed = true;
+        Debug.Log("Press Upward Button");
+    }
+
+    // Dipanggil saat tombol "Down" ditekan
+    public void PressDownwardButton()
+    {
+        isDownwardPressed = true;
+        Debug.Log("Press Downward Button");
+    }
+
     void Update()
     {
         // Mengambil input tombol Arrow Up dan Arrow Down
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            isDownwardPressed = true;
+            PressDownwardButton();
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            isUpwardPressed = true;
+            PressUpwardButton();
         }
     }
 
@@ -83,4 +97,6 @@ public class Rocket : MonoBehaviour
             elapsedTime = 0f; // Reset waktu yang telah berlalu
         }
     }
+
+  
 }
