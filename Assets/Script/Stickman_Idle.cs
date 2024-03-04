@@ -5,7 +5,7 @@ public class Stickman_Idle : MonoBehaviour
 {
     public float gravity;
     public Vector2 velocity; // Properti untuk kecepatan stickman
-    public float jumpVelocity = 20;
+/*    public float jumpVelocity = 20;
     public float groundHeight = 10;
     public bool isGrounded = false;
 
@@ -18,8 +18,8 @@ public class Stickman_Idle : MonoBehaviour
 
     void Update()
     {
-        Vector2 pos = transform.position;
-        float groundDistance = Mathf.Abs(pos.y - groundHeight);
+        Vector2 pos = transform.position;*/
+/*        float groundDistance = Mathf.Abs(pos.y - groundHeight);
 
 
         if (isGrounded || groundDistance <= jumpGroundThreshold)
@@ -66,5 +66,5 @@ public class Stickman_Idle : MonoBehaviour
             }
         }
         transform.position = pos;
-    }
+    }*/
 }

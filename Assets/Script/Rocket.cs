@@ -5,6 +5,9 @@ public class Rocket : MonoBehaviour
     public Transform player; // Referensi ke pemain
     public float acceleration = 1f; // Percepatan arah Rocket
     public float maxSpeed = 10f; // Kecepatan maksimal Rocket
+    public float speedIncrement = 1f; // Penambahan kecepatan setiap detik
+    public float maxSpeedIncrement = 50f; // Maksimal penambahan kecepatan setelah 50 detik
+    private float elapsedTime; // Waktu yang telah berlalu sejak penambahan terakhir
 
     private Rigidbody2D rb; // Rigidbody2D Rocket
     private bool isUpwardPressed = false; // Apakah tombol Arrow UP sedang ditekan
@@ -15,6 +18,7 @@ public class Rocket : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        elapsedTime = 0f; // Inisialisasi waktu yang telah berlalu
     }
 
     void Update()
@@ -67,6 +71,16 @@ public class Rocket : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, -downwardForce);
             isDownwardPressed = false;
+        }
+
+        // Update waktu yang telah berlalu
+        elapsedTime += Time.deltaTime;
+
+        // Jika sudah 10 detik dan speed belum mencapai maksimal, tambahkan speed
+        if (elapsedTime >= 10f && maxSpeed < maxSpeedIncrement)
+        {
+            maxSpeed += speedIncrement;
+            elapsedTime = 0f; // Reset waktu yang telah berlalu
         }
     }
 }

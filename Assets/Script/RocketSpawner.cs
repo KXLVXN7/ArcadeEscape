@@ -36,6 +36,7 @@ public class RocketSpawner : MonoBehaviour
     {
         // Membuat instance Rocket dari prefab di titik spawn
         GameObject rocketInstance = Instantiate(rocketPrefab, spawnPoint.position, Quaternion.identity);
+        Debug.Log("Spawn Rocket !");
 
         // Catatan: Rocket tidak akan memiliki kecepatan awal karena kita tidak memberikan kecepatan saat spawn
     }

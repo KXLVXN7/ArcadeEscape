@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -11,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform feetPos;
     [SerializeField] private float groundDistance = 0.25f;
     [SerializeField] private float jumpTime = 0.3f;
+    [SerializeField] private Animator anim;
 
     [SerializeField] private float crouchHeight = 0.5f;
 
@@ -28,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = true;
             rb.velocity = Vector2.up * jumpForce;
+            anim.SetBool("Jump", true);
         }
         if (isJumping && Input.GetButton("Jump"))
         {
@@ -40,11 +40,16 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 isJumping = false;
+            anim.SetBool("Jump", false);
+
+
             }
         }
         if (Input.GetButtonUp("Jump"))
         {
             isJumping = false;
+            anim.SetBool("Jump", false);
+
             jumpTimer = 0;
         }
         #endregion
@@ -63,4 +68,3 @@ public class PlayerMovement : MonoBehaviour
         #endregion
     }
 }
-

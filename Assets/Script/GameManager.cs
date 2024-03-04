@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -36,14 +37,27 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         onPlay.Invoke();
-        isPlaying= true;
+        isPlaying = true;
         Debug.Log("Start Game !");
     }
     public void GameOver()
     {
-        onGameOver.Invoke();   
-        currentScore= 0;
+        onGameOver.Invoke();
+        Debug.Log("Game Over !!");
+        currentScore = 0;
         isPlaying = false;
+
+    }
+    
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void QuitApp()
+    {
+        Application.Quit();
+        Destroy(gameObject); // Hapus salinan ganda GameManager
     }
 
     public string PScore()
@@ -51,4 +65,3 @@ public class GameManager : MonoBehaviour
         return Mathf.RoundToInt(currentScore).ToString();
     }
 }
-
