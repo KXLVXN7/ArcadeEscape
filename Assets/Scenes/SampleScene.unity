@@ -167,6 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bbe8eef08c07924aaef58d4c10c1cbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rocket: {fileID: -2692075075311256833, guid: 444c098aac1caa44abdc78739ad835b6, type: 3}
+  _upButton: {fileID: 1173851914}
+  _downButton: {fileID: 107928783}
   rocketPrefab: {fileID: 3710312990259750487, guid: 444c098aac1caa44abdc78739ad835b6, type: 3}
   spawnPoint: {fileID: 48164352}
   spawnInterval1: 7
@@ -1795,6 +1798,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bbe8eef08c07924aaef58d4c10c1cbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rocket: {fileID: 0}
+  _upButton: {fileID: 0}
+  _downButton: {fileID: 0}
   rocketPrefab: {fileID: 3710312990259750487, guid: 444c098aac1caa44abdc78739ad835b6, type: 3}
   spawnPoint: {fileID: 640926244}
   spawnInterval1: 2
@@ -2609,7 +2615,7 @@ RectTransform:
   m_GameObject: {fileID: 1052595530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6, y: 1.425, z: 1}
+  m_LocalScale: {x: 1.6060002, y: 1.425, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 471715282}

@@ -1,9 +1,14 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class RocketSpawner : MonoBehaviour
 {
+    [SerializeField] Rocket rocket;
+    [SerializeField] Button _upButton;
+    [SerializeField] Button _downButton;
+
     public GameObject rocketPrefab; // Prefab Rocket yang akan di-spawn
     public Transform spawnPoint; // Titik spawn untuk Rocket
+
 
     public float spawnInterval1 = 2f; // Interval waktu antara setiap spawn untuk interval 1
     public float spawnInterval2 = 5f; // Interval waktu antara setiap spawn untuk interval 2
@@ -35,8 +40,10 @@ public class RocketSpawner : MonoBehaviour
     void SpawnRocket()
     {
         // Membuat instance Rocket dari prefab di titik spawn
-        GameObject rocketInstance = Instantiate(rocketPrefab, spawnPoint.position, Quaternion.identity);
+        Rocket rocketInstance = Instantiate(rocket, spawnPoint.position, Quaternion.identity);
         Debug.Log("Spawn Rocket !");
+
+        rocketInstance.Setup(_upButton, _downButton);
 
         // Catatan: Rocket tidak akan memiliki kecepatan awal karena kita tidak memberikan kecepatan saat spawn
     }

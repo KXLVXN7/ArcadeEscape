@@ -22,10 +22,10 @@ public class Rocket : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         elapsedTime = 0f; // Inisialisasi waktu yang telah berlalu
-        _upButton = GameObject.Find("UpButton").GetComponent<Button>();
+  /*      _upButton = GameObject.Find("UpButton").GetComponent<Button>();
         _downButton = GameObject.Find("DownButton").GetComponent<Button>();
         _upButton.onClick.AddListener(PressUpwardButton);
-        _downButton.onClick.AddListener(PressDownwardButton);
+        _downButton.onClick.AddListener(PressDownwardButton);*/
     }
 
     // Dipanggil saat tombol "Up" ditekan
@@ -55,6 +55,14 @@ public class Rocket : MonoBehaviour
         {
             PressUpwardButton();
         }
+    }
+
+    public void Setup(Button upButton, Button downButton)
+    {
+        _upButton = upButton;
+        _downButton = downButton;
+        _upButton.onClick.AddListener(PressUpwardButton);
+        _downButton.onClick.AddListener(PressDownwardButton);
     }
 
     void FixedUpdate()
