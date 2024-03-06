@@ -478,19 +478,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 107928784}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -2692075075311256833, guid: 444c098aac1caa44abdc78739ad835b6, type: 3}
-        m_TargetAssemblyTypeName: Rocket, Assembly-CSharp
-        m_MethodName: PressDownwardButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &107928784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2981,19 +2969,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1173851915}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -2692075075311256833, guid: 444c098aac1caa44abdc78739ad835b6, type: 3}
-        m_TargetAssemblyTypeName: Rocket, Assembly-CSharp
-        m_MethodName: PressUpwardButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1173851915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3994,7 +3970,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584834253}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3992, y: -4.5, z: 0}
+  m_LocalPosition: {x: -1.91, y: -4.5, z: 0}
   m_LocalScale: {x: 23.87811, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5262,7 +5238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1988694269
 Transform:
   m_ObjectHideFlags: 0
@@ -5394,7 +5370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2022611146
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5806,7 +5782,7 @@ PrefabInstance:
       objectReference: {fileID: 1270244712}
     - target: {fileID: 1552742626495453720, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
       propertyPath: jumpForce
-      value: 5.5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1552742626495453720, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
       propertyPath: m_Enabled

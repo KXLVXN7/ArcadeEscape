@@ -196,13 +196,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1552742626495453721, guid: 3a607e6598baecd47bcdc1e54851f620, type: 3}
   acceleration: 10
-  maxSpeed: 15
+  maxSpeed: 8
   speedIncrement: 1
   maxSpeedIncrement: 50
+  rb: {fileID: 0}
   isUpwardPressed: 0
   isDownwardPressed: 0
-  upwardForce: 5
-  downwardForce: 5
+  upwardForce: 4
+  downwardForce: 4
+  _upButton: {fileID: 0}
+  _downButton: {fileID: 0}
 --- !u!1 &8512605006809056264
 GameObject:
   m_ObjectHideFlags: 0
